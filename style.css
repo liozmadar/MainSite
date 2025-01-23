@@ -14,8 +14,8 @@ h1 {
     margin-bottom: 20px;
 }
 
-.website {
-    margin-bottom: 40px;
+.website a {
+    display: inline-block; /* רק סביב החלק של הקישור */
 }
 
 h2 {
@@ -34,3 +34,15 @@ img {
 img:hover {
     transform: scale(1.05);
 }
+
+
+a {
+    text-decoration: none;
+    color: inherit; /* משאיר את הצבע של הטקסט המקורי */
+}
+
+a:hover {
+    color: #007bff; /* שינוי צבע בעת ריחוף */
+    text-decoration: underline; /* קו תחתון בעת ריחוף */
+}
+
