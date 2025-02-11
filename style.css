@@ -1,50 +1,87 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #e0f7fa; /* Soft blue background from the first CSS */
+    background-color: #e0f7fa; /* Soft blue background */
+}
+
+/* Keep the header and title separate from the container */
+.header-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style for the main header */
+h1 {
+    font-size: 2rem;
+    width: 50%;
+    color: white;
+    padding: 10px 20px;
+    background: #4CAF50;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    height: 80px;
 }
 
 
+.calculator-title {
+    font-size: 2rem; /* Slightly larger for emphasis */
+    font-weight: bold;
+    color: #333; /* Black/Dark gray text for a clean look */
+    text-align: center;
+    margin-top: 15px;
+    padding-bottom: 5px; /* Space between text and underline */
+    position: relative; /* Needed for underline effect */
+    display: inline-block; /* Keeps it compact */
+}
+
+/* Stylish underline effect */
+.calculator-title::after {
+    content: "";
+    display: block;
+    width: 130%; /* Underline width */
+    height: 3px; /* Underline thickness */
+    background-color: #4CAF50; /* Green color matching theme */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Centers the underline */
+    border-radius: 2px; /* Smooth edges */
+}
+
+
+
+/* Container for the calculator blocks */
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 1px;
     display: flex;
     flex-wrap: wrap; /* Ensures the items wrap on smaller screens */
     justify-content: center; /* Centers the items */
     gap: 20px; /* Adds space between the items */
 }
 
-h1 {
-    font-size: 2rem; /* Slightly smaller font for better proportion */
-    width: 50%; /* Matches the first script's header width */
-    color: white; /* White text for strong contrast */
-    padding: 10px 20px; /* Matches the first script's padding */
-    background: #4CAF50; /* Solid green background to match first script */
-    border-radius: 10px; /* Matches first script's rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* More visible depth */
-    display: flex;
-    align-items: center; /* Centers content vertically */
-    justify-content: center; /* Centers content horizontally */
-    margin: 10px auto; /* Centers the header */
-    height: 80px; /* Ensures a fixed height for proper alignment */
-}
-
+/* Style for each calculator link */
 .website {
-    flex: 1 1 45%; /* 45% width for each website block, with room to grow/shrink */
-    max-width: 500px; /* Prevents the items from becoming too wide */
+    flex: 1 1 45%;
+    max-width: 500px;
     text-align: center;
-    padding: 20px; /* Padding inside the website card */
-    border: 2px solid #4CAF50; /* Add a subtle border */
-    border-radius: 10px; /* Rounded corners for the border */
-    background-color: #fff; /* White background for the cards */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions for hover effects */
+    padding: 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* Hover effect for each website block */
 .website:hover {
-    transform: scale(1.05); /* Slight zoom effect when hovering */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover for emphasis */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .website a {
@@ -52,11 +89,13 @@ h1 {
     text-align: center;
 }
 
+/* Style for the section headers inside each block */
 h2 {
     font-size: 1.5rem;
     margin-top: 10px;
 }
 
+/* Style for calculator images */
 .calculator-img {
     max-width: 100%;
     height: auto;
@@ -69,12 +108,13 @@ h2 {
     transform: scale(1.05);
 }
 
+/* Style for links */
 a {
     text-decoration: none;
-    color: inherit; /* Keeps the original text color */
+    color: inherit;
 }
 
 a:hover {
-    color: #007bff; /* Change color when hovering */
-    text-decoration: underline; /* Underline on hover */
+    color: #007bff;
+    text-decoration: underline;
 }
